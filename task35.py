@@ -1,9 +1,13 @@
-n=int(input('Введите число n: '))
-flag=False
-for i in range(2,n):
-    if n%i==0:
-        print('no')
-        flag=True
-if flag==False:
+def is_simple(n):
+    for i in range (2,n):
+        if n%i==0:
+            return False
+    return True
+
+n= int(input())
+flag=is_simple(n)
+if(flag==True):
     print('yes')
+else:
+    print('no')        
             
